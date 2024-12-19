@@ -1,0 +1,44 @@
+# Eclipse関連の設定ファイルやキャッシュを除外
+.metadata/
+*.launch
+.settings/
+bin/
+target/
+
+# OSやツールの一時ファイル
+*.log
+*.lock
+*.tmp
+*.class
+.DS_Store
+Thumbs.db
+
+# Windows特有のファイルやフォルダ
+AppData/
+Desktop/
+Documents/
+Downloads/
+Music/
+Pictures/
+Videos/
+*.ini
+NTUSER.DAT*
+OneDrive/
+
+# Git関連の一時ファイル
+.git/
+
+# Java関連の成果物
+*.war
+*.jar
+
+# Gradle関連
+.gradle/
+build/
+
+# Maven関連
+.m2/
+
+# IDE関連
+.idea/
+*.iml
