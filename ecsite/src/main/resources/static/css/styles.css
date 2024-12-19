@@ -1,0 +1,211 @@
+package CSS;
+
+/* 基本設定 */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #008000;
+}
+/* デフォルトのスタイルをリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ナビゲーションバー */
+nav {
+    background-color: #333; #6f4f1f; /* 茶色 */
+    padding: 10px 20px; /* ナビゲーションバーのパディング */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ページ上部に固定 */
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+/* ロゴのスタイル */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ナビゲーションリンクのリスト */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+/* リストアイテムのスタイル */
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* フォームのスタイル */
+form {
+    display: inline-block;
+    margin: 0; /* フォームのデフォルトのマージンを削除 */
+}
+
+/* ボタンのスタイル */
+button {
+    background-color: #4CAF50; /* 緑色の背景 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* ボタンのホバー効果 */
+button:hover {
+    background-color: #45a049; /* ホバー時に少し暗い緑色に */
+}
+
+/* ボタンがクリックされた時の効果 */
+button:active {
+    background-color: #388e3c; /* クリック時にさらに暗く */
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* ヒーローセクションが画面全体を覆うように */
+    background-image: url('https://example.com/coffee-hero.jpg'); /* 背景画像を指定 */
+    background-size: cover; /* 画像を全体にフィットさせる */
+    background-position: center; /* 画像を中央に配置 */
+    color: white; /* テキストの色を白に設定 */
+    text-align: center; /* テキストを中央に配置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向に中央揃え */
+    align-items: center; /* 横方向に中央揃え */
+    padding: 0 20px; /* 左右のパディングを追加 */
+}
+
+.hero h1 {
+    font-size: 3rem; /* 見出しのサイズを大きく */
+    font-family: 'Arial', sans-serif; /* フォントファミリーを指定 */
+    font-weight: 700; /* 太字に設定 */
+    margin-bottom: 20px; /* 下に余白を追加 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストにシャドウを追加 */
+}
+
+.hero p {
+    font-size: 1.5rem; /* パラグラフのサイズを設定 */
+    margin-bottom: 40px; /* 下に余白を追加 */
+    line-height: 1.6; /* 行間を広げる */
+    max-width: 600px; /* 最大幅を設定 */
+    text-align: center; /* テキストを中央揃え */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* テキストにシャドウを追加 */
+}
+
+.hero form {
+    margin-top: 20px; /* 上に余白を追加 */
+}
+
+.hero button {
+    background-color: #ff6347; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    padding: 15px 30px; /* ボタンの内側の余白 */
+    font-size: 1.2rem; /* ボタンの文字サイズ */
+    border: none; /* ボタンの枠線を削除 */
+    border-radius: 30px; /* ボタンを丸みを帯びさせる */
+    cursor: pointer; /* ポインタを手のひらに変更 */
+    transition: all 0.3s ease; /* ボタンにホバー効果のトランジションを追加 */
+}
+
+.hero button:hover {
+    background-color: #e53e3e; /* ホバー時の背景色を変更 */
+    transform: scale(1.1); /* ボタンを少し大きくする */
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* 小さい画面では見出しのサイズを小さく */
+    }
+
+    .hero p {
+        font-size: 1rem; /* 小さい画面ではパラグラフのサイズを小さく */
+    }
+
+    .hero button {
+        font-size: 1rem; /* ボタンの文字サイズを小さく */
+    }
+}
+
+/* 商品セクション */
+#products {
+    padding: 50px 10%;
+    text-align: center;
+}
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+}
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+.product-card button {
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.product-card button:hover {
+    background-color: #4e342e;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6d4c41;
+    color: #fff;
+    margin-top: 50px;
+}
